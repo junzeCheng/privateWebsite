@@ -1,0 +1,23 @@
+@import url(./b.css) 在当前css引入新的css
+
+border-bottom:1px solid transparent;  透明色避免加边框会改变间距大小 先加上一个边距使其透明
+块级元素内行内元素高度不会撑起父级高度，需变成块级元素
+
+color元素可以继承 color:inherit
+
+div高度：
+由其内部 文档流元素 的高度总和决定
+文档流元素：文档内元素的流动方向 内联元素从左到右 块级元素独占一行
+英文单词默认不会被分割  word-break:break-all;可以把单词分开
+
+内联元素高度：
+不同字体有其建议行高 所以设置相同的font-size大小由于字体的不同高度就不同
+设置的font-size大小等于字体内容的最高高度和最低高度之差
+
+两大bug误区：
+1.不要轻易给块级元素设置高度，
+2.position:fixed 会默认改变宽度，此时需要width:100%属性 但是会发生子元素比父元素大的情况
+此时需要在position:fixed属性的元素内加上一个div 设置clearfix属性 设置padding保证宽高不会发生变化
+
+CSS画三角形
+利用border div宽高设置为0 变换border四个方向width的值就可以得到想要的三角形
