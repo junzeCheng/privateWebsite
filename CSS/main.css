@@ -3,11 +3,17 @@
     padding:0;
 }
 body{
-    background-color: #e0e2dfec;
+    background-color:#efefef;
 }
 a{
     color:inherit;
     text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+}
+ul,ol{
+    list-style: none;
 }
 hr{
     height:0;
@@ -81,9 +87,10 @@ hr{
 }
 .myCard{
     max-width: 950px;
-    background-color: whitesmoke;
+    background-color: #efefef;
     margin-left:auto;
     margin-right:auto;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
 }
 main .myCard .picture{
     object-fit: cover;
@@ -113,7 +120,7 @@ main .myCard .picture{
     float:left;
 }
 main .myCard .text{
-    width:500px;
+    width:470px;
     margin-left:20px;
     float:left;
 }
@@ -147,16 +154,131 @@ main .myCard .text{
     width:40px;
     height:40px;
     margin:10px 10px;
-    line-height: 40px;
+    line-height: 36px;
     padding:3px;
 }
 .myCard footer.media a:hover{
     background-color: #cf5d5f;
 }
-
 .myCard  svg{
     width:20px;
     height:20px;
     fill:white;
     vertical-align:middle;
+}
+body>main{
+    margin-top:-260px;
+}
+main .downloadResume{
+    text-align: center;
+}
+main a.download{
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+    color:#3d4d51;
+    display:inline-block;
+    border-radius: 8px;
+    border:1px solid #9a9da2;
+    padding:21px 50px;
+    text-align: center; 
+    margin:32px  0;
+}
+main a.download:hover{
+    box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.3);
+    transition:box-shadow 0.4s;
+}
+main .selfIntroduction{
+    max-width: 950px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    line-height:30px;
+}
+section.skills,
+section.works{
+    max-width: 950px;
+    margin:60px auto;
+}
+section.skills h2,
+section.works h2,
+section.skills h3{
+    text-align:center;
+    color: #3d4451;
+}
+section h2{
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+section.skills>ol{
+    margin-top:30px;
+    padding:30px 50px;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+}
+section.skills>ol>li{
+    float:left;
+    width:50%;
+    box-sizing: border-box;
+    padding-right:18px;
+}
+progress
+{
+   color:#E6686a; /*兼容IE10的已完成进度背景*/
+   border:none;
+   width:100%;
+   height:5px;
+   margin-bottom:10px;
+   background:rgb(247, 186, 186);/*这个属性也可当作Chrome的已完成进度背景，只不过被下面的::progress-bar覆盖了*/     
+
+}
+progress::-webkit-progress-bar
+{
+       background-color:rgb(247, 186, 186);
+}
+progress::-webkit-progress-value
+{
+     background-color:#E6686a;
+}
+section.works nav{
+    text-align: center;
+}
+section.works ol{
+    display:inline-block;
+    vertical-align: top;
+    margin:0 auto;
+}
+.skillpointDefault{
+    border-bottom: 4px solid #fff;
+}
+.skillpoint{
+    border-bottom: 4px solid #E6686a;
+}
+section.works ol li{
+    float:left;
+    padding:20px 15px;
+    transition: all 0.4s;
+}
+section.works .jobs{
+    position: relative;
+    height:600px;
+    margin-top:30px;
+}
+section.works .jobs .big,
+section.works .jobs .small1,
+section.works .jobs .small2{
+    position: absolute;
+    top:0;
+    left:0;
+    object-fit: cover;
+}
+section.works .jobs .small1{
+    position: absolute;
+    top:0;
+    left:650px;
+}
+section.works .jobs .small2{
+    position: absolute;
+    top:200px;
+    left:650px;
 }

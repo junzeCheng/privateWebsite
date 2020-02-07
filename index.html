@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">  -->
     <title>我的个人简历</title>
     <link rel="stylesheet" href="./CSS/main.css">
     <script src="//at.alicdn.com/t/font_1629514_l4rcutf8w1s.js"></script>
@@ -99,35 +99,83 @@
                 </a>
             </footer>
         </div>
-        <a class="button" href="#">下载简历</a>
+        <p class="downloadResume">
+            <a class="button download" href="./image/hero.jpg" download>DOWNLOAD RESUME</a>
+        </p>
+        <p class="selfIntroduction">
+            I don't know what I do now is right, those are wrong, and when I finally die
+            then I know these. So what  I can do now is to try to do everything well, and then
+            wait to die. Sometimes I can be very happy to talk to everyone, can be very
+            presumptuous, but no one knows, it is but very deliberatelycamouflage,
+            camouflage; I can make him very happy very happy, but couldn't find the source of
+            happiness, just giggle. 
+        </p>
     </main>
-    <section>
-        <h2>专业技能</h2>
-        <ol>
-            <li>HTML 5 &amp; CSS 3</li>
-            <li>Javascript</li>
-            <li>jQuery</li>
-            <li>Vue</li>
-            <li>React</li>
-            <li>HTTP</li>
+    <section class="skills">
+        <h2>Profession Skills</h2>
+        <ol class="technology clearfix">
+            <li>
+                <h3>HTML 5 &amp; CSS 3</h3>
+                <progress max="100" value="80"></progress>
+            </li>
+            <li>
+                <h3>Javascript</h3>
+                <progress max="100" value="70"></progress>
+            </li>
+            <li>
+                <h3>jQuery</h3>
+                <progress max="100" value="60"></progress>
+            </li>
+            <li>
+                <h3>Vue</h3>
+                <progress max="100" value="50"></progress>
+            </li>
+            <li>
+                <h3>React</h3>
+                <progress max="100" value="60"></progress>
+            </li>
+            <li>
+                <h3>HTTP</h3>
+                <progress max="100" value="70"></progress>
+            </li>
         </ol>
     </section>
-    <section>
-        <h2>我的作品</h2>
+    <section class="works">
+        <h2>Portfolio</h2>
         <nav>
-            <ol>
-
-                <li>所有作品</li>
-                <li>框架作品</li>
-                <li>原生js &amp; css</li>
+            <ol id="test" class="clearfix">
+                <li  class="">所有作品</li>
+                <li  class="">框架作品</li>
+                <li  class="">原生js &amp; css</li>
             </ol>
         </nav>
         <div class="jobs">
-            <div class="big"></div>
-            <div class="small"></div>
-            <div class="small"></div>
+            <div class="big">
+                <img src="./image/figure.jpg" width="600" alt="作品1">
+            </div>
+            <div class="small1">
+                <img src="./image/figure.jpg" width="260" alt="作品2">
+            </div>
+            <div class="small2">
+                <img src="./image/figure.jpg" width="260" alt="作品3">
+            </div>
         </div>
     </section>
 </body>
+<script>
+    window.onload = function () {
+        var b = document.getElementById("test").children;
+        b[0].className="skillpoint";
+        for (var i = 0; i < b.length; i++) {
+            b[i].onclick = function (e) {
+              for(var j=0;j<b.length;j++){
+                  b[j].className="skillpointDefault";
+              }
+               this.className="skillpoint";
+            }
+        }
+    }
+
+</script>
 
 </html>

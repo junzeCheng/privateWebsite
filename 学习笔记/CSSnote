@@ -21,3 +21,9 @@ div高度：
 
 CSS画三角形
 利用border div宽高设置为0 变换border四个方向width的值就可以得到想要的三角形
+
+ box-sizing: border-box;这可令浏览器呈现出带有指定宽度和高度的框，并把边框和内边距放入框中。
+
+所有加了inline-block的元素要和vertical-align:top一起使用否则有bug
+    display:inline-block;
+    vertical-align: top; 
