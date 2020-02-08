@@ -27,3 +27,14 @@ CSS画三角形
 所有加了inline-block的元素要和vertical-align:top一起使用否则有bug
     display:inline-block;
     vertical-align: top; 
+curl 是常用的命令行工具，用来请求 Web 服务器。它的名字就是客户端（client）的 URL 工具的意思。
+不带参数 就是发出GET请求
+-d 参数用于发送POST请求的数据体
+curl -l http://baidu.com  -L参数会让 HTTP 请求跟随服务器的重定向。curl 默认不跟随重定向。
+curl -s -v -- http://baidu.com -s参数将不输出错误和进度信息。-v参数输出通信的整个过程，用于调试。
+
+Hexo 是一个快速、简洁且高效的博客框架。
+hexo init  新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。
+hexo g     生成静态文件。
+hexo server 启动服务器。默认情况下，访问网址为： http://localhost:4000/。
+hexo deploy 部署网站。
