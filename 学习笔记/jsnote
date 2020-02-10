@@ -1,0 +1,43 @@
+js的数据类型
+number:数值型
+string:字符型
+boolean:布尔型
+undefined:undefined  如var n //n此时就是undefined
+null:null  如 var s=null //null一般初始化对象时使用 以便和undefined区别
+object:对象 注意没有array和function类型 其都属于object
+symbol：es6新增数据类型
+
+ps:
+在使用typeof获取数据类型时
+typeof(null)--object
+typeof(function)--function
+这应该算是js的设计矛盾 了解即可
+
+————————————————————————————————————————————————————
+如何转化成Number？
+1：Number('1')=>1
+2: parseInt('1',10)=>1 10表示十进制
+3:parseFloat("1.23",10)=>1.23
+4:'1'-0=>1
+5:+'1'=>1,+'-1'=>-1,-'-1'=>1
+6:Number(NaN)=>NaN
+________________________________________________________
+btoa()把字符串转化为Base64编码
+btoa('junze')==anVuemU=
+atob("anVuemU=")='junze'
+Object.keys(obj)判断一个对象有哪些key
+____________________________________________________________________
+如何转化成字符串？
+xxx.toString()转换为字符串//null和undefined类型不可用
+object对象转化结果为"[object Object]"
+一般转化为字符串采用+''方法 null和undefined也可使用
+或者window.String(XXX);此方法为全局函数效果和+''相同
+——————————————————————————————————————————————————————————————————————————————————————————————————
+如何转化成boolean?
+Boolean(xxx);'',0,null,undefined,NaN为false其他为true
+一般可以用！！xxx达到相同的效果 更加方便
+——————————————————————————————————————————————————————————————————————————————————————————————————
+js对象==
+一个对象如果没有被引用 就会被回收
+100.toString(16)//16进制
+xxx.trim()去掉多余的空格
