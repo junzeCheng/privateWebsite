@@ -1,7 +1,4 @@
-*{
-    margin:0;
-    padding:0;
-}
+*{ margin:0; padding:0;}
 body{
     background-color:#efefef;
 }
@@ -23,7 +20,7 @@ hr{
 .clearfix::after{
     content:"";
     display:block;
-    clear:both;
+    clear:both; 
 }
 .topNavBar{
    padding:12px 0px;
@@ -31,7 +28,15 @@ hr{
    left:0px;
    top:0px;
    width:100%;
+   transition: all 1s;
+   color:rgba(255,255,255,0.7);
 }
+.sticky{
+    padding:6px 0px;
+    background: rgba(02,03,01,0.5);
+    z-index: 1;
+    box-shadow: 0 0 10px rgb(0,0,0,25);
+ }
 .topNavBar-content{
     padding:0 16px;
 }
@@ -51,15 +56,32 @@ hr{
 }
 .topNavBar nav>ul>li>a{
     font-size:12px;
-    color: rgba(255,255,255,0.7);
+    color: inherit;
     font-weight: bold;
     border-top:3px solid transparent;
     border-bottom:3px solid transparent;
     padding:8px 0;
     display: block;
+    position: relative;
 }
-.topNavBar nav>ul>li>a:hover{
+.topNavBar nav>ul>li>a:hover::after{
+    content:"";
+    display: block;
+    position: absolute;
+    left:0;
+    top:100%;
+    width:100%;
+    height:3px;
     border-bottom:3px solid #e06567;
+    animation: menuslide 0.5s;
+}
+@keyframes menuslide{
+    0%{
+        width:0px;
+    }
+    100%{
+        width:100%;
+    }
 }
 .topNavBar .logo{
     float:left;
@@ -76,7 +98,7 @@ hr{
     color:#9a9da2;
 }
 .banner{
-    background-image: url(../image/bg.jpg);
+    background-image: url(../image/bg.jpg); 
     height:500px;
     background-position: center center;
     background-size: cover;
@@ -84,6 +106,9 @@ hr{
 .banner .mask{
     height:500px;
     background-color: rgba(0,0,0,0.4);
+}
+body>main{
+    margin-top:-260px;
 }
 .myCard{
     max-width: 950px;
@@ -165,9 +190,6 @@ main .myCard .text{
     height:20px;
     fill:white;
     vertical-align:middle;
-}
-body>main{
-    margin-top:-260px;
 }
 main .downloadResume{
     text-align: center;

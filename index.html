@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
     <title>我的个人简历</title>
+    <link rel="stylesheet" href="./CSS/load.css">
     <link rel="stylesheet" href="./CSS/main.css">
     <script src="//at.alicdn.com/t/font_1629514_l4rcutf8w1s.js"></script>
     <style type="text/css">
@@ -20,16 +21,17 @@
 </head>
 
 <body>
-    <div class="topNavBar">
+    <div id="firstLoad" class="load"></div>
+    <div id="topNavBar" class="topNavBar">
         <div class="topNavBar-content clearfix">
             <a class="logo" href="#" alt="logo">
                 <span class="rs">Rs</span><span class="card">Card</span>
             </a>
             <nav>
                 <ul class="clearfix">
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">SKILLS</a></li>
-                    <li><a href="#">EXPERIENCS</a></li>
+                    <li><a href="#myIntroduction">ABOUT</a></li>
+                    <li><a href="#mySkills">SKILLS</a></li>
+                    <li><a href="#myWorks">EXPERIENCS</a></li>
                     <li><a href="#">PRICING</a></li>
                     <li><a href="#">BLOG</a></li>
                     <li><a href="#">CONTACT</a></li>
@@ -40,7 +42,7 @@
     <div class="banner">
         <div class="mask"></div>
     </div>
-    <main>
+    <main id="myIntroduction">
         <div class="myCard">
             <div class="pictureAndText clearfix">
                 <div class="picture">
@@ -56,12 +58,12 @@
                     <dl>
                         <dt>Age</dt>
                         <dd>22</dd>
-                        <dt>Sex</dt>
+                        <dt>gender</dt>
                         <dd>male</dd>
                         <dt>E-Mail</dt>
-                        <dd>2248659941@qq.com</dd>
+                        <dd>junzecheng@gmail.com</dd>
                         <dt>PHONE</dt>
-                        <dd>13733790610</dd>
+                        <dd>137XXXX0610</dd>
                         <dt>Professional</dt>
                         <dd>Computer science and technology</dd>
                         <dt>Education</dt>
@@ -111,7 +113,7 @@
             happiness, just giggle. 
         </p>
     </main>
-    <section class="skills">
+    <section id="mySkills" class="skills">
         <h2>Profession Skills</h2>
         <ol class="technology clearfix">
             <li>
@@ -140,7 +142,7 @@
             </li>
         </ol>
     </section>
-    <section class="works">
+    <section id="myWorks" class="works">
         <h2>Portfolio</h2>
         <nav>
             <ol id="test" class="clearfix">
@@ -177,5 +179,12 @@
     }
 
 </script>
+<script>
+    setTimeout(function(){
+        firstLoad.classList.remove("load");
+    },500)
+</script>
+<script src="./JS/main.js"></script>
+
 
 </html>
