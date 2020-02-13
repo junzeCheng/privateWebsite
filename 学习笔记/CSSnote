@@ -40,3 +40,6 @@ hexo server 启动服务器。默认情况下，访问网址为： http://localh
 hexo deploy 部署网站。
 
 document.querySelectorAll('选择器')
+______________________________________________________________________
+
+ white-space: nowrap规定段落中的文本不进行换行：

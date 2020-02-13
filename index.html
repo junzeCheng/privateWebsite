@@ -3,12 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">  -->
     <title>我的个人简历</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
     <link rel="stylesheet" href="./CSS/load.css">
     <link rel="stylesheet" href="./CSS/main.css">
     <script src="//at.alicdn.com/t/font_1629514_l4rcutf8w1s.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
     <style type="text/css">
         .icon {
             width: 1em;
@@ -16,6 +18,11 @@
             vertical-align: -0.15em;
             fill: currentColor;
             overflow: hidden;
+        }
+
+        .swiper-container {
+            margin-top:30px;
+            width: 900px;
         }
     </style>
 </head>
@@ -144,47 +151,50 @@
     </section>
     <section id="myWorks" class="works">
         <h2>Portfolio</h2>
-        <nav>
-            <ol id="test" class="clearfix">
-                <li  class="">所有作品</li>
-                <li  class="">框架作品</li>
-                <li  class="">原生js &amp; css</li>
-            </ol>
-        </nav>
-        <div class="jobs">
-            <div class="big">
-                <img src="./image/figure.jpg" width="600" alt="作品1">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <img src="image/1.jpg" class="swiper-slide">
+                <img src="image/2.jpg" class="swiper-slide">
+                <img src="image/3.jpg" class="swiper-slide">
+                <img src="image/4.jpg" class="swiper-slide">
+                <img src="image/5.jpg" class="swiper-slide">
             </div>
-            <div class="small1">
-                <img src="./image/figure.jpg" width="260" alt="作品2">
-            </div>
-            <div class="small2">
-                <img src="./image/figure.jpg" width="260" alt="作品3">
-            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- 如果需要滚动条 -->
+            <div class="swiper-scrollbar"></div>
         </div>
     </section>
 </body>
 <script>
-    window.onload = function () {
-        var b = document.getElementById("test").children;
-        b[0].className="skillpoint";
-        for (var i = 0; i < b.length; i++) {
-            b[i].onclick = function (e) {
-              for(var j=0;j<b.length;j++){
-                  b[j].className="skillpointDefault";
-              }
-               this.className="skillpoint";
-            }
-        }
-    }
-
+    var mySwiper = new Swiper('.swiper-container', {
+        loop: true, // 循环模式选项
+        autoplay: true,
+        // 如果需要分页器
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        // 如果需要滚动条
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    })        
 </script>
 <script>
-    setTimeout(function(){
+    setTimeout(function () {
         firstLoad.classList.remove("load");
-    },500)
+    }, 500)
 </script>
 <script src="./JS/main.js"></script>
-
 
 </html>

@@ -60,6 +60,16 @@ if(1){
 *
 * 　　2、声明后不能再修改
 *
-* 　　3、如果声明的是复合类型数据，可以修改其属性
+* 　　3、如果声明的是复合类型数据，可以修改其属性    
 ————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
-js标准库
+js函数--
+函数的五种声明方式
+1：function x(input1,input2){return undefined}
+2: var x=function (input1,input2){return undefined} //匿名函数
+3：var x=function y(input1,input2){return undefined}//x.name=y
+console.log(y)//y is not defined  只能在函数内部被访问
+4：var f=new Function('x','y','return x+y');f.name=anonymous
+5: var f=(x,y)=>{return undefined}
+-------------------------------------------------------------------------------
+
+content-type:x-www-form-urlencoded

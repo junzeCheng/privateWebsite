@@ -22,6 +22,7 @@ hr{
     display:block;
     clear:both; 
 }
+/*顶部导航栏 */
 .topNavBar{
    padding:12px 0px;
    position:fixed;
@@ -97,6 +98,7 @@ hr{
 .topNavBar .logo>.card{
     color:#9a9da2;
 }
+/* banner遮罩层 */
 .banner{
     background-image: url(../image/bg.jpg); 
     height:500px;
@@ -110,6 +112,7 @@ hr{
 body>main{
     margin-top:-260px;
 }
+/* 个人卡片介绍 */
 .myCard{
     max-width: 950px;
     background-color: #efefef;
@@ -217,6 +220,7 @@ main .selfIntroduction{
     text-align:center;
     line-height:30px;
 }
+/* 技能作品集 */
 section.skills,
 section.works{
     max-width: 950px;
@@ -261,46 +265,4 @@ progress::-webkit-progress-bar
 progress::-webkit-progress-value
 {
      background-color:#E6686a;
-}
-section.works nav{
-    text-align: center;
-}
-section.works ol{
-    display:inline-block;
-    vertical-align: top;
-    margin:0 auto;
-}
-.skillpointDefault{
-    border-bottom: 4px solid #fff;
-}
-.skillpoint{
-    border-bottom: 4px solid #E6686a;
-}
-section.works ol li{
-    float:left;
-    padding:20px 15px;
-    transition: all 0.4s;
-}
-section.works .jobs{
-    position: relative;
-    height:600px;
-    margin-top:30px;
-}
-section.works .jobs .big,
-section.works .jobs .small1,
-section.works .jobs .small2{
-    position: absolute;
-    top:0;
-    left:0;
-    object-fit: cover;
-}
-section.works .jobs .small1{
-    position: absolute;
-    top:0;
-    left:650px;
-}
-section.works .jobs .small2{
-    position: absolute;
-    top:200px;
-    left:650px;
 }
